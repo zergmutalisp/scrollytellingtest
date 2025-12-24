@@ -1,0 +1,23 @@
+{
+  "name": "scrollytelling-demo",
+  "version": "1.0.0",
+  "description": "A beautiful scrollytelling demo with interactive animations",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python3 -m http.server 8000 || python -m http.server 8000",
+    "preview": "npm run dev"
+  },
+  "keywords": [
+    "scrollytelling",
+    "storytelling",
+    "data-visualization",
+    "interactive",
+    "scroll-animation"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/scrollytellingtest.git"
+  }
+}

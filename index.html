@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollytelling Demo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>The Journey Through Data</h1>
+        <p>Scroll down to explore the story</p>
+        <div class="scroll-indicator">↓</div>
+    </header>
+
+    <main>
+        <!-- Section 1 -->
+        <section class="scroll-section" id="section-1">
+            <div class="content-wrapper">
+                <div class="sticky-container">
+                    <div class="visual-panel">
+                        <div class="chart-placeholder" id="chart-1">
+                            <svg width="100%" height="100%" viewBox="0 0 400 300">
+                                <circle cx="200" cy="150" r="80" fill="#667eea" class="pulse-circle"/>
+                                <text x="200" y="160" text-anchor="middle" fill="white" font-size="24">Start</text>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-panel">
+                    <div class="step" data-step="1">
+                        <h2>Chapter 1: The Beginning</h2>
+                        <p>Every great story starts somewhere. This is an example of scrollytelling, where narrative meets data visualization.</p>
+                    </div>
+                    <div class="step" data-step="2">
+                        <h2>Understanding the Data</h2>
+                        <p>As you scroll, elements on the page react to your position, creating an immersive experience.</p>
+                    </div>
+                    <div class="step" data-step="3">
+                        <h2>The Pattern Emerges</h2>
+                        <p>Scrollytelling is particularly effective for data journalism, educational content, and interactive reports.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="scroll-section" id="section-2">
+            <div class="content-wrapper">
+                <div class="sticky-container">
+                    <div class="visual-panel">
+                        <div class="chart-placeholder" id="chart-2">
+                            <div class="bar-chart">
+                                <div class="bar" style="--height: 60%; --color: #667eea;">
+                                    <span class="bar-label">2020</span>
+                                </div>
+                                <div class="bar" style="--height: 75%; --color: #764ba2;">
+                                    <span class="bar-label">2021</span>
+                                </div>
+                                <div class="bar" style="--height: 90%; --color: #f093fb;">
+                                    <span class="bar-label">2022</span>
+                                </div>
+                                <div class="bar" style="--height: 95%; --color: #4facfe;">
+                                    <span class="bar-label">2023</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-panel">
+                    <div class="step" data-step="4">
+                        <h2>Chapter 2: Growth Over Time</h2>
+                        <p>Notice how the visualization changes as you scroll through different narrative points.</p>
+                    </div>
+                    <div class="step" data-step="5">
+                        <h2>Rapid Expansion</h2>
+                        <p>The bars represent growth over time, demonstrating how visual elements can enhance storytelling.</p>
+                    </div>
+                    <div class="step" data-step="6">
+                        <h2>Reaching New Heights</h2>
+                        <p>Each step in your scroll reveals another layer of the narrative.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3 -->
+        <section class="scroll-section" id="section-3">
+            <div class="content-wrapper">
+                <div class="sticky-container">
+                    <div class="visual-panel">
+                        <div class="chart-placeholder" id="chart-3">
+                            <div class="network-viz">
+                                <div class="node" style="--x: 50%; --y: 50%;"></div>
+                                <div class="node" style="--x: 25%; --y: 25%;"></div>
+                                <div class="node" style="--x: 75%; --y: 25%;"></div>
+                                <div class="node" style="--x: 25%; --y: 75%;"></div>
+                                <div class="node" style="--x: 75%; --y: 75%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-panel">
+                    <div class="step" data-step="7">
+                        <h2>Chapter 3: Connections</h2>
+                        <p>Everything is interconnected. Scrollytelling helps reveal these relationships.</p>
+                    </div>
+                    <div class="step" data-step="8">
+                        <h2>The Network Effect</h2>
+                        <p>As you scroll, new connections become visible, illustrating complex relationships.</p>
+                    </div>
+                    <div class="step" data-step="9">
+                        <h2>The Complete Picture</h2>
+                        <p>Only by scrolling through the entire narrative do we see the full story.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final Section -->
+        <section class="final-section">
+            <h2>The End... or Just the Beginning?</h2>
+            <p>This is a simple example of scrollytelling. Your story could be so much more.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn">Learn More</a>
+                <a href="https://github.com" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Built with HTML, CSS, and JavaScript | Deploy to any static hosting platform</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
