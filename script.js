@@ -56,115 +56,235 @@ class ScrollytellingController {
 
     triggerStepAnimation(stepNumber) {
         switch(stepNumber) {
+            // Section 1: Timeline (Steps 1-3)
             case 1:
-                this.animateChart1();
+                this.animateTimelineStart();
                 break;
             case 2:
-                this.animateChart1Enhanced();
+                this.animateTimelineProgress();
                 break;
             case 3:
-                this.animateChart1Final();
+                this.animateTimelineComplete();
                 break;
+            // Section 2: Territory (Steps 4-6)
             case 4:
-                this.animateChart2Start();
+                this.animateTerritoryStart();
                 break;
             case 5:
-                this.animateChart2Growth();
+                this.animateTerritoryExpansion();
                 break;
             case 6:
-                this.animateChart2Final();
+                this.animateTerritoryPeak();
                 break;
+            // Section 3: Battles (Steps 7-9)
             case 7:
-                this.animateChart3Start();
+                this.animateBattlesVictories();
                 break;
             case 8:
-                this.animateChart3Network();
+                this.animateBattlesAll();
                 break;
             case 9:
-                this.animateChart3Complete();
+                this.animateBattlesCost();
+                break;
+            // Section 4: Reforms (Steps 10-12)
+            case 10:
+                this.animateReformsLegal();
+                break;
+            case 11:
+                this.animateReformsModernization();
+                break;
+            case 12:
+                this.animateReformsComplete();
+                break;
+            // Section 5: Decline (Steps 13-16)
+            case 13:
+                this.animateDeclineRussia();
+                break;
+            case 14:
+                this.animateDeclineExile();
+                break;
+            case 15:
+                this.animateDeclineHundredDays();
+                break;
+            case 16:
+                this.animateDeclineFinal();
                 break;
         }
     }
 
-    // Chart 1 Animations (Circle)
-    animateChart1() {
+    // Section 1: Timeline Animations
+    animateTimelineStart() {
         const chart = document.getElementById('chart-1');
         chart.classList.add('active');
+        const line = chart.querySelector('.timeline-line');
+        const events = chart.querySelectorAll('.timeline-event');
+
+        if (line) line.classList.add('active');
+        if (events[0]) events[0].classList.add('active');
     }
 
-    animateChart1Enhanced() {
+    animateTimelineProgress() {
         const chart = document.getElementById('chart-1');
-        const circle = chart.querySelector('.pulse-circle');
-        if (circle) {
-            circle.setAttribute('r', '100');
-        }
+        const events = chart.querySelectorAll('.timeline-event');
+
+        events.forEach((event, index) => {
+            if (index <= 2) {
+                setTimeout(() => event.classList.add('active'), index * 200);
+            }
+        });
     }
 
-    animateChart1Final() {
+    animateTimelineComplete() {
         const chart = document.getElementById('chart-1');
-        const circle = chart.querySelector('.pulse-circle');
-        if (circle) {
-            circle.setAttribute('r', '120');
-            circle.setAttribute('fill', '#764ba2');
-        }
+        const events = chart.querySelectorAll('.timeline-event');
+
+        events.forEach((event, index) => {
+            setTimeout(() => event.classList.add('active'), index * 150);
+        });
     }
 
-    // Chart 2 Animations (Bar Chart)
-    animateChart2Start() {
+    // Section 2: Territory Animations
+    animateTerritoryStart() {
         const chart = document.getElementById('chart-2');
         chart.classList.add('active');
-        const bars = chart.querySelectorAll('.bar');
-        bars.forEach((bar, index) => {
+        const france = chart.querySelector('.territory.france');
+        if (france) france.classList.add('active');
+    }
+
+    animateTerritoryExpansion() {
+        const chart = document.getElementById('chart-2');
+        const territories = chart.querySelectorAll('.territory');
+
+        territories.forEach((territory, index) => {
+            setTimeout(() => territory.classList.add('active'), index * 150);
+        });
+    }
+
+    animateTerritoryPeak() {
+        const chart = document.getElementById('chart-2');
+        const expansions = chart.querySelectorAll('.territory.expansion');
+
+        expansions.forEach(territory => {
+            territory.classList.add('active');
+        });
+    }
+
+    // Section 3: Battle Animations
+    animateBattlesVictories() {
+        const chart = document.getElementById('chart-3');
+        chart.classList.add('active');
+        const battles = chart.querySelectorAll('.battle-bar');
+
+        // Animate only victories first
+        battles.forEach((battle, index) => {
+            if (battle.classList.contains('victory')) {
+                setTimeout(() => battle.classList.add('animate'), index * 200);
+            }
+        });
+    }
+
+    animateBattlesAll() {
+        const chart = document.getElementById('chart-3');
+        const battles = chart.querySelectorAll('.battle-bar');
+
+        // Animate all battles
+        battles.forEach((battle, index) => {
+            setTimeout(() => battle.classList.add('animate'), index * 150);
+        });
+    }
+
+    animateBattlesCost() {
+        const chart = document.getElementById('chart-3');
+        const defeats = chart.querySelectorAll('.battle-bar.defeat');
+
+        // Highlight defeats
+        defeats.forEach(defeat => {
+            defeat.style.transform = 'scaleY(1) scaleX(1.1)';
+        });
+    }
+
+    // Section 4: Reform Animations
+    animateReformsLegal() {
+        const chart = document.getElementById('chart-4');
+        chart.classList.add('active');
+        const cards = chart.querySelectorAll('.reform-card');
+
+        if (cards[0]) cards[0].classList.add('active');
+    }
+
+    animateReformsModernization() {
+        const chart = document.getElementById('chart-4');
+        const cards = chart.querySelectorAll('.reform-card');
+
+        cards.forEach((card, index) => {
+            if (index <= 2) {
+                setTimeout(() => card.classList.add('active'), index * 200);
+            }
+        });
+    }
+
+    animateReformsComplete() {
+        const chart = document.getElementById('chart-4');
+        const cards = chart.querySelectorAll('.reform-card');
+
+        cards.forEach((card, index) => {
+            setTimeout(() => card.classList.add('active'), index * 150);
+        });
+    }
+
+    // Section 5: Decline Animations
+    animateDeclineRussia() {
+        const chart = document.getElementById('chart-5');
+        chart.classList.add('active');
+        const line = chart.querySelector('.decline-line');
+        const points = chart.querySelectorAll('.decline-point');
+        const labels = chart.querySelectorAll('.decline-label');
+
+        if (line) line.classList.add('active');
+        if (points[0]) points[0].classList.add('active');
+        if (labels[0]) labels[0].classList.add('active');
+    }
+
+    animateDeclineExile() {
+        const chart = document.getElementById('chart-5');
+        const points = chart.querySelectorAll('.decline-point');
+        const labels = chart.querySelectorAll('.decline-label');
+
+        points.forEach((point, index) => {
+            if (index <= 2) {
+                setTimeout(() => {
+                    point.classList.add('active');
+                    if (labels[index]) labels[index].classList.add('active');
+                }, index * 200);
+            }
+        });
+    }
+
+    animateDeclineHundredDays() {
+        const chart = document.getElementById('chart-5');
+        const points = chart.querySelectorAll('.decline-point');
+        const labels = chart.querySelectorAll('.decline-label');
+
+        points.forEach((point, index) => {
+            if (index <= 3) {
+                setTimeout(() => {
+                    point.classList.add('active');
+                    if (labels[index]) labels[index].classList.add('active');
+                }, index * 150);
+            }
+        });
+    }
+
+    animateDeclineFinal() {
+        const chart = document.getElementById('chart-5');
+        const points = chart.querySelectorAll('.decline-point');
+        const labels = chart.querySelectorAll('.decline-label');
+
+        points.forEach((point, index) => {
             setTimeout(() => {
-                bar.classList.add('animate');
+                point.classList.add('active');
+                if (labels[index]) labels[index].classList.add('active');
             }, index * 100);
-        });
-    }
-
-    animateChart2Growth() {
-        const chart = document.getElementById('chart-2');
-        const bars = chart.querySelectorAll('.bar');
-        bars.forEach((bar, index) => {
-            bar.style.setProperty('--height', `${60 + (index * 10)}%`);
-        });
-    }
-
-    animateChart2Final() {
-        const chart = document.getElementById('chart-2');
-        const bars = chart.querySelectorAll('.bar');
-        const heights = ['70%', '85%', '95%', '100%'];
-        bars.forEach((bar, index) => {
-            bar.style.setProperty('--height', heights[index]);
-        });
-    }
-
-    // Chart 3 Animations (Network)
-    animateChart3Start() {
-        const chart = document.getElementById('chart-3');
-        chart.classList.add('active');
-        const nodes = chart.querySelectorAll('.node');
-        // Animate center node first
-        nodes[0].classList.add('active');
-    }
-
-    animateChart3Network() {
-        const chart = document.getElementById('chart-3');
-        const nodes = chart.querySelectorAll('.node');
-        // Animate all nodes
-        nodes.forEach((node, index) => {
-            setTimeout(() => {
-                node.classList.add('active');
-            }, index * 150);
-        });
-    }
-
-    animateChart3Complete() {
-        const chart = document.getElementById('chart-3');
-        const nodes = chart.querySelectorAll('.node');
-        // All nodes active with enhanced effect
-        nodes.forEach(node => {
-            node.classList.add('active');
-            node.style.transform = 'translate(-50%, -50%) scale(1.1)';
         });
     }
 

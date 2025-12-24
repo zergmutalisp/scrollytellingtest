@@ -3,115 +3,290 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scrollytelling Demo</title>
+    <title>Napoleon: Rise and Fall of an Empire</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header class="hero">
-        <h1>The Journey Through Data</h1>
-        <p>Scroll down to explore the story</p>
+        <h1>Napoleon Bonaparte</h1>
+        <p>The Rise and Fall of an Empire</p>
+        <div class="hero-dates">1769 - 1821</div>
         <div class="scroll-indicator">↓</div>
     </header>
 
     <main>
-        <!-- Section 1 -->
+        <!-- Section 1: Early Life & Rise -->
         <section class="scroll-section" id="section-1">
             <div class="content-wrapper">
                 <div class="sticky-container">
                     <div class="visual-panel">
                         <div class="chart-placeholder" id="chart-1">
-                            <svg width="100%" height="100%" viewBox="0 0 400 300">
-                                <circle cx="200" cy="150" r="80" fill="#667eea" class="pulse-circle"/>
-                                <text x="200" y="160" text-anchor="middle" fill="white" font-size="24">Start</text>
-                            </svg>
+                            <div class="timeline-viz">
+                                <div class="timeline-event" data-year="1769" style="--position: 0%;">
+                                    <div class="event-dot"></div>
+                                    <div class="event-label">1769<br>Born</div>
+                                </div>
+                                <div class="timeline-event" data-year="1785" style="--position: 25%;">
+                                    <div class="event-dot"></div>
+                                    <div class="event-label">1785<br>Officer</div>
+                                </div>
+                                <div class="timeline-event" data-year="1796" style="--position: 50%;">
+                                    <div class="event-dot"></div>
+                                    <div class="event-label">1796<br>General</div>
+                                </div>
+                                <div class="timeline-event" data-year="1799" style="--position: 75%;">
+                                    <div class="event-dot"></div>
+                                    <div class="event-label">1799<br>Consul</div>
+                                </div>
+                                <div class="timeline-line"></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="narrative-panel">
                     <div class="step" data-step="1">
-                        <h2>Chapter 1: The Beginning</h2>
-                        <p>Every great story starts somewhere. This is an example of scrollytelling, where narrative meets data visualization.</p>
+                        <h2>Humble Beginnings</h2>
+                        <p>Born in Corsica in 1769, just after the island was sold to France by Genoa. Napoleon grew up speaking Corsican and Italian before mastering French at military school.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">10</div>
+                            <div class="stat-label">Age when he entered military school</div>
+                        </div>
                     </div>
                     <div class="step" data-step="2">
-                        <h2>Understanding the Data</h2>
-                        <p>As you scroll, elements on the page react to your position, creating an immersive experience.</p>
+                        <h2>Military Prodigy</h2>
+                        <p>At 26, he was promoted to general after successfully defending the French Revolution against royalist forces in 1795.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">26</div>
+                            <div class="stat-label">Years old when made general</div>
+                        </div>
                     </div>
                     <div class="step" data-step="3">
-                        <h2>The Pattern Emerges</h2>
-                        <p>Scrollytelling is particularly effective for data journalism, educational content, and interactive reports.</p>
+                        <h2>The Coup</h2>
+                        <p>In 1799, Napoleon staged a coup d'état and became First Consul of France, effectively ending the French Revolution and beginning his rule.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">30</div>
+                            <div class="stat-label">Years old when he seized power</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 2 -->
+        <!-- Section 2: The Empire Expands -->
         <section class="scroll-section" id="section-2">
             <div class="content-wrapper">
                 <div class="sticky-container">
                     <div class="visual-panel">
                         <div class="chart-placeholder" id="chart-2">
-                            <div class="bar-chart">
-                                <div class="bar" style="--height: 60%; --color: #667eea;">
-                                    <span class="bar-label">2020</span>
-                                </div>
-                                <div class="bar" style="--height: 75%; --color: #764ba2;">
-                                    <span class="bar-label">2021</span>
-                                </div>
-                                <div class="bar" style="--height: 90%; --color: #f093fb;">
-                                    <span class="bar-label">2022</span>
-                                </div>
-                                <div class="bar" style="--height: 95%; --color: #4facfe;">
-                                    <span class="bar-label">2023</span>
-                                </div>
+                            <div class="territory-map">
+                                <svg viewBox="0 0 400 300" class="europe-map">
+                                    <!-- France (core) -->
+                                    <rect class="territory france" x="120" y="120" width="60" height="60" rx="3"/>
+                                    <!-- Expanded territories -->
+                                    <rect class="territory expansion" x="180" y="100" width="50" height="40" rx="3"/>
+                                    <rect class="territory expansion" x="180" y="140" width="50" height="50" rx="3"/>
+                                    <rect class="territory expansion" x="100" y="180" width="80" height="40" rx="3"/>
+                                    <rect class="territory expansion" x="230" y="120" width="45" height="50" rx="3"/>
+                                    <rect class="territory expansion" x="70" y="110" width="50" height="50" rx="3"/>
+                                    <text x="200" y="155" class="map-label" text-anchor="middle">Europe</text>
+                                </svg>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="narrative-panel">
                     <div class="step" data-step="4">
-                        <h2>Chapter 2: Growth Over Time</h2>
-                        <p>Notice how the visualization changes as you scroll through different narrative points.</p>
+                        <h2>Emperor of France</h2>
+                        <p>On December 2, 1804, Napoleon crowned himself Emperor. France controlled much of Western Europe through direct rule and allied kingdoms.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">44M</div>
+                            <div class="stat-label">Population under direct French rule</div>
+                        </div>
                     </div>
                     <div class="step" data-step="5">
-                        <h2>Rapid Expansion</h2>
-                        <p>The bars represent growth over time, demonstrating how visual elements can enhance storytelling.</p>
+                        <h2>Continental Dominance</h2>
+                        <p>At its peak in 1812, the French Empire and its satellites controlled most of continental Europe, stretching from Spain to Poland.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">750,000</div>
+                            <div class="stat-label">Square kilometers under French control</div>
+                        </div>
                     </div>
                     <div class="step" data-step="6">
-                        <h2>Reaching New Heights</h2>
-                        <p>Each step in your scroll reveals another layer of the narrative.</p>
+                        <h2>The Grand Army</h2>
+                        <p>Napoleon assembled the largest European army seen since antiquity—the Grande Armée—with soldiers from across his empire.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">600,000</div>
+                            <div class="stat-label">Soldiers in the invasion of Russia</div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Section 3 -->
+        <!-- Section 3: Military Campaigns -->
         <section class="scroll-section" id="section-3">
             <div class="content-wrapper">
                 <div class="sticky-container">
                     <div class="visual-panel">
                         <div class="chart-placeholder" id="chart-3">
-                            <div class="network-viz">
-                                <div class="node" style="--x: 50%; --y: 50%;"></div>
-                                <div class="node" style="--x: 25%; --y: 25%;"></div>
-                                <div class="node" style="--x: 75%; --y: 25%;"></div>
-                                <div class="node" style="--x: 25%; --y: 75%;"></div>
-                                <div class="node" style="--x: 75%; --y: 75%;"></div>
+                            <div class="battle-chart">
+                                <div class="battle-bar victory" style="--height: 85%;">
+                                    <span class="battle-label">Austerlitz<br>1805</span>
+                                </div>
+                                <div class="battle-bar victory" style="--height: 78%;">
+                                    <span class="battle-label">Jena<br>1806</span>
+                                </div>
+                                <div class="battle-bar victory" style="--height: 72%;">
+                                    <span class="battle-label">Wagram<br>1809</span>
+                                </div>
+                                <div class="battle-bar defeat" style="--height: 40%;">
+                                    <span class="battle-label">Leipzig<br>1813</span>
+                                </div>
+                                <div class="battle-bar defeat" style="--height: 25%;">
+                                    <span class="battle-label">Waterloo<br>1815</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="narrative-panel">
                     <div class="step" data-step="7">
-                        <h2>Chapter 3: Connections</h2>
-                        <p>Everything is interconnected. Scrollytelling helps reveal these relationships.</p>
+                        <h2>Brilliant Victories</h2>
+                        <p>Napoleon won approximately 60 major battles. His victory at Austerlitz (1805) against Russia and Austria is considered his tactical masterpiece.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">60+</div>
+                            <div class="stat-label">Major battles won</div>
+                        </div>
                     </div>
                     <div class="step" data-step="8">
-                        <h2>The Network Effect</h2>
-                        <p>As you scroll, new connections become visible, illustrating complex relationships.</p>
+                        <h2>Military Innovation</h2>
+                        <p>Napoleon revolutionized warfare with corps organization, rapid movement, and artillery concentration. His strategies are still studied in military academies worldwide.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">7</div>
+                            <div class="stat-label">Coalition wars fought against him</div>
+                        </div>
                     </div>
                     <div class="step" data-step="9">
-                        <h2>The Complete Picture</h2>
-                        <p>Only by scrolling through the entire narrative do we see the full story.</p>
+                        <h2>The Cost of War</h2>
+                        <p>The Napoleonic Wars reshaped Europe but at an enormous human cost. Millions died in two decades of nearly continuous conflict.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">3-6M</div>
+                            <div class="stat-label">Estimated total deaths</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Reforms & Legacy -->
+        <section class="scroll-section" id="section-4">
+            <div class="content-wrapper">
+                <div class="sticky-container">
+                    <div class="visual-panel">
+                        <div class="chart-placeholder" id="chart-4">
+                            <div class="reform-grid">
+                                <div class="reform-card">
+                                    <div class="reform-icon">⚖️</div>
+                                    <div class="reform-title">Legal Code</div>
+                                    <div class="reform-number">2,281</div>
+                                    <div class="reform-subtitle">Articles</div>
+                                </div>
+                                <div class="reform-card">
+                                    <div class="reform-icon">🏫</div>
+                                    <div class="reform-title">Education</div>
+                                    <div class="reform-number">45</div>
+                                    <div class="reform-subtitle">Lycées founded</div>
+                                </div>
+                                <div class="reform-card">
+                                    <div class="reform-icon">🏛️</div>
+                                    <div class="reform-title">Banking</div>
+                                    <div class="reform-number">1800</div>
+                                    <div class="reform-subtitle">Bank of France</div>
+                                </div>
+                                <div class="reform-card">
+                                    <div class="reform-icon">🛤️</div>
+                                    <div class="reform-title">Infrastructure</div>
+                                    <div class="reform-number">1,000s</div>
+                                    <div class="reform-subtitle">km of roads</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-panel">
+                    <div class="step" data-step="10">
+                        <h2>The Napoleonic Code</h2>
+                        <p>Perhaps his most lasting legacy: a comprehensive legal code that established equality before the law, property rights, and secular authority. It still influences legal systems in over 70 countries.</p>
+                    </div>
+                    <div class="step" data-step="11">
+                        <h2>Modernizing France</h2>
+                        <p>Napoleon reformed education, creating the lycée system and universities. He established the Bank of France, standardized weights and measures, and built roads and bridges across Europe.</p>
+                    </div>
+                    <div class="step" data-step="12">
+                        <h2>Cultural Impact</h2>
+                        <p>He commissioned the Arc de Triomphe, reorganized the Louvre, and supported the arts. His reforms modernized administration throughout Europe, spreading principles of the French Revolution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Downfall -->
+        <section class="scroll-section" id="section-5">
+            <div class="content-wrapper">
+                <div class="sticky-container">
+                    <div class="visual-panel">
+                        <div class="chart-placeholder" id="chart-5">
+                            <div class="decline-viz">
+                                <svg viewBox="0 0 400 300" class="decline-chart">
+                                    <path class="decline-line" d="M 50 80 L 150 70 L 200 100 L 250 180 L 350 250"
+                                          stroke="#c53030" stroke-width="4" fill="none"/>
+                                    <circle class="decline-point" cx="50" cy="80" r="8" fill="#667eea"/>
+                                    <circle class="decline-point" cx="150" cy="70" r="8" fill="#667eea"/>
+                                    <circle class="decline-point" cx="200" cy="100" r="8" fill="#f6ad55"/>
+                                    <circle class="decline-point" cx="250" cy="180" r="8" fill="#fc8181"/>
+                                    <circle class="decline-point" cx="350" cy="250" r="8" fill="#c53030"/>
+                                    <text x="50" y="100" class="decline-label">1812</text>
+                                    <text x="145" y="90" class="decline-label">Russia</text>
+                                    <text x="195" y="120" class="decline-label">1814</text>
+                                    <text x="245" y="200" class="decline-label">Elba</text>
+                                    <text x="325" y="270" class="decline-label">Waterloo</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="narrative-panel">
+                    <div class="step" data-step="13">
+                        <h2>The Russian Disaster</h2>
+                        <p>In 1812, Napoleon invaded Russia with 600,000 soldiers. The harsh winter and Russian scorched-earth tactics devastated his army. Only about 100,000 returned.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">83%</div>
+                            <div class="stat-label">Casualty rate in Russia campaign</div>
+                        </div>
+                    </div>
+                    <div class="step" data-step="14">
+                        <h2>First Exile</h2>
+                        <p>After the Battle of Leipzig in 1813 and the invasion of France, Napoleon abdicated in 1814. He was exiled to Elba, a small Mediterranean island.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">300</div>
+                            <div class="stat-label">Days in exile before escaping</div>
+                        </div>
+                    </div>
+                    <div class="step" data-step="15">
+                        <h2>The Hundred Days</h2>
+                        <p>Napoleon escaped Elba and returned to France in 1815. He ruled for 100 days before his final defeat at Waterloo by British and Prussian forces.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">100</div>
+                            <div class="stat-label">Days of his final reign</div>
+                        </div>
+                    </div>
+                    <div class="step" data-step="16">
+                        <h2>Final Exile</h2>
+                        <p>Napoleon was exiled to Saint Helena, a remote island in the South Atlantic, 2,000 km from the nearest land. He died there in 1821 at age 51.</p>
+                        <div class="stat-box">
+                            <div class="stat-number">1821</div>
+                            <div class="stat-label">Year of death, age 51</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,17 +294,27 @@
 
         <!-- Final Section -->
         <section class="final-section">
-            <h2>The End... or Just the Beginning?</h2>
-            <p>This is a simple example of scrollytelling. Your story could be so much more.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn">Learn More</a>
-                <a href="https://github.com" class="btn btn-secondary">View on GitHub</a>
+            <h2>A Lasting Legacy</h2>
+            <p>From Corsican outsider to Emperor of France, Napoleon reshaped Europe and left an indelible mark on history, law, and warfare.</p>
+            <div class="legacy-stats">
+                <div class="legacy-item">
+                    <div class="legacy-number">70+</div>
+                    <div class="legacy-text">Countries influenced by Napoleonic Code</div>
+                </div>
+                <div class="legacy-item">
+                    <div class="legacy-number">16</div>
+                    <div class="legacy-text">Years as ruler of France</div>
+                </div>
+                <div class="legacy-item">
+                    <div class="legacy-number">200+</div>
+                    <div class="legacy-text">Years his reforms still impact us</div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <p>Built with HTML, CSS, and JavaScript | Deploy to any static hosting platform</p>
+        <p>A scrollytelling journey through history | Built with HTML, CSS, and JavaScript</p>
     </footer>
 
     <script src="script.js"></script>
