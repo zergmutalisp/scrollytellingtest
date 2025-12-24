@@ -1,15 +1,25 @@
-# Scrollytelling Demo
+# Napoleon Bonaparte: A Scrollytelling Journey
 
-An interactive scrollytelling experience with beautiful animations and smooth transitions. This project demonstrates how to combine scrolling with storytelling through data visualization and narrative elements.
+An interactive scrollytelling experience chronicling Napoleon's rise and fall. This project combines historical narrative with data visualizations to tell the story of one of history's most influential figures.
 
 ## Features
 
-- **Interactive Scroll Animations** - Content animates as you scroll
-- **Data Visualizations** - Dynamic charts and graphs that respond to scroll position
-- **Smooth Transitions** - Polished animations powered by vanilla JavaScript
+- **Historical Timeline** - Track Napoleon's journey from Corsica to Emperor
+- **Territory Visualizations** - See the French Empire expand across Europe
+- **Battle Statistics** - Victories and defeats brought to life
+- **Reform Metrics** - The lasting impact of Napoleonic reforms
+- **Interactive Scroll Animations** - Content animates as you scroll through history
 - **Responsive Design** - Works perfectly on desktop, tablet, and mobile
 - **Zero Dependencies** - Pure HTML, CSS, and JavaScript
 - **Production Ready** - Optimized for deployment to any static hosting platform
+
+## Story Coverage
+
+1. **Early Life & Rise (1769-1799)** - From Corsican outsider to First Consul
+2. **Empire at Its Peak (1804-1812)** - Territorial expansion and the Grande Armée
+3. **Military Campaigns** - 60+ major battles and revolutionary tactics
+4. **Reforms & Legacy** - Napoleonic Code, education, and modernization
+5. **Downfall (1812-1821)** - Russia, exile, and the final defeat at Waterloo
 
 ## Live Demo
 
@@ -139,13 +149,13 @@ Uses Intersection Observer API - supported in all modern browsers.
 
 ## Use Cases
 
-This scrollytelling template is perfect for:
+This scrollytelling approach is perfect for:
 
+- Historical narratives and timelines
+- Educational content about significant figures
 - Data journalism and interactive reports
-- Product showcases and landing pages
-- Educational content and tutorials
-- Portfolio and case study presentations
-- Annual reports and data stories
+- Biography and documentary-style presentations
+- Museum and exhibition digital experiences
 
 ## Contributing
 
@@ -161,6 +171,10 @@ MIT License - feel free to use this project for personal or commercial purposes.
 - [Scrollytelling Best Practices](https://pudding.cool/process/how-to-implement-scrollytelling/)
 - [Intersection Observer API](https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API)
 
+## Historical Note
+
+All statistics and dates are based on historical records. Napoleon's impact on European law, military strategy, and governance continues to be studied and debated today.
+
 ## Credits
 
-Built with modern web technologies and best practices for scrollytelling experiences.
+Built with modern web technologies and best practices for scrollytelling experiences. Historical content compiled from public domain sources.
